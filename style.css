@@ -255,6 +255,12 @@ img {
   display: block;
 }
 
+.container {
+  margin: 0 30px;
+  border-right: 1px solid #f0f0f0;
+  border-left: 1px solid #f0f0f0;
+}
+
 .header {
   margin: 0 30px;
   padding: 0 30px;
@@ -353,7 +359,7 @@ img {
 }
 
 .frontPageHeader {
-  background: url("./assets/img/frontPage/frontPageHero.jpg");
+  background: url("./assets/img/frontPage/mainHero.jpg");
   background-size: cover;
   background-position: center;
 }

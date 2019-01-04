@@ -1,5 +1,6 @@
 $bgColor: #f8f8f8;
 $txtColor: #3c3c3c;
+$borderColor: #f0f0f0;
 $mainColor: #a953a8;
 
 $maxwidth: 980px;
@@ -11,4 +12,11 @@ a {
 
 img {
   display: block;
+}
+
+
+.container {
+  margin: 0 30px;
+  border-right: 1px solid $borderColor;
+  border-left: 1px solid $borderColor;
 }

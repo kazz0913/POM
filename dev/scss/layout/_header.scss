@@ -1,8 +1,8 @@
 .header {
   margin: 0 30px;
   padding: 0 30px;
-  border-right: 1px solid #f0f0f0;
-  border-left: 1px solid #f0f0f0;
+  border-right: 1px solid $borderColor;
+  border-left: 1px solid $borderColor;
   &_wrapper {
     margin: 0 auto;
     display: flex;
