@@ -249,11 +249,6 @@ audio, canvas, progress, video {
 a {
   color: #3c3c3c;
   text-decoration: none;
-  transition: all .5s ease-out;
-}
-
-a:hover {
-  opacity: .7;
 }
 
 img {
@@ -268,7 +263,6 @@ img {
 }
 
 .header_wrapper {
-  padding: 10px 0;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -282,15 +276,26 @@ img {
 
 .headerPcNav_menu {
   display: flex;
-  align-items: center;
 }
 
 .headerPcNav_menu li {
+  height: 100%;
+  width: 100px;
   list-style: none;
+  text-align: center;
 }
 
-.headerPcNav_menu li + li {
-  margin: 0 0 0 10px;
+.headerPcNav_menu li a {
+  height: 100%;
+  width: 100%;
+  line-height: 90px;
+  display: inline-block;
+  letter-spacing: 0.05em;
+  transition: all .3s;
+}
+
+.headerPcNav_menu li a:hover {
+  border-bottom: 2px solid #ee7f01;
 }
 
 .headerSpNav {
