@@ -8,16 +8,39 @@
 <?php wp_head(); ?>
 </head>
 <body>
+<?php
+  $logo = get_custom_logo();
+?>
 
 <header class="header">
   <div class="header_wrapper">
     <?php if ( is_front_page() ) :?>
       <h1 class="siteTitle">
-        <?php the_custom_logo(); ?>
+      <?php
+        if ( $logo ):
+          the_custom_logo();
+        else:
+      ?>
+        <a href="<?= esc_url( home_url('/') ) ?>">
+          <img src="<?php echo get_template_directory_uri() . '/assets/img/layout/logo.png'?>" alt="POMロゴ">
+        </a>
+      <?php
+        endif;
+      ?>
       </h1>
     <?php else : ?>
       <p class="siteTitle">
-        <?php the_custom_logo(); ?>
+      <?php
+        if ( $logo ):
+          the_custom_logo();
+        else:
+      ?>
+        <a href="<?= esc_url( home_url('/') ) ?>">
+          <img src="<?php get_template_directory_uri() . '/assets/img/layout/logo.png' ?>" alt="POMロゴ">
+        </a>
+      <?php
+        endif;
+      ?>
       </p>
     <?php endif ; ?>
 
