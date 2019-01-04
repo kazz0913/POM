@@ -4,7 +4,6 @@
   border-right: 1px solid #f0f0f0;
   border-left: 1px solid #f0f0f0;
   &_wrapper {
-    padding: 10px 0;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -17,11 +16,21 @@
   display: flex;
   &_menu {
     display: flex;
-    align-items: center;
     li {
+      height: 100%;
+      width: 100px;
       list-style: none;
-      & + li {
-        margin: 0 0 0 10px;
+      text-align: center;
+      a {
+        height: 100%;
+        width: 100%;
+        line-height: 90px;
+        display: inline-block;
+        letter-spacing: 0.05em;
+        transition: all .3s;
+        &:hover {
+         border-bottom: 2px solid #ee7f01;
+        }
       }
     }
   }

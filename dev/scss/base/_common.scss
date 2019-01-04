@@ -7,10 +7,6 @@ $maxwidth: 980px;
 a {
   color: $txtColor;
   text-decoration: none;
-  transition: all .5s ease-out;
-  &:hover {
-    opacity: .7;
-  }
 }
 
 img {
