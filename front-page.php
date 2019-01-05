@@ -3,8 +3,10 @@
 ?>
   <header class="frontPageHeader">
     <div class="frontPageHeader_wrapper">
-      <h1 class="frontPageHeader_title">トップだよ</h1>
-      <p class="frontPageHeader_subtitle">トップのサブタイトルだよ〜</p>
+      <div class="frontPageHeader_txtWrapper">
+        <h1 class="frontPageHeader_title">LIVE WITH HOME</h1>
+        <p class="frontPageHeader_subTitle">住まいと生きる</p>
+      </div>
     </div>
   </header>
 
