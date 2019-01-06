@@ -22,7 +22,7 @@
         else:
       ?>
         <a href="<?= esc_url( home_url('/') ) ?>">
-          <img src="<?php echo get_template_directory_uri() . '/assets/img/layout/logo.png'?>" alt="POMロゴ">
+          <img src="<?= get_template_directory_uri() . '/assets/img/layout/logo.png'?>" alt="POMロゴ">
         </a>
       <?php
         endif;
@@ -36,7 +36,7 @@
         else:
       ?>
         <a href="<?= esc_url( home_url('/') ) ?>">
-          <img src="<?php get_template_directory_uri() . '/assets/img/layout/logo.png' ?>" alt="POMロゴ">
+          <img src="<?= get_template_directory_uri() . '/assets/img/layout/logo.png' ?>" alt="POMロゴ">
         </a>
       <?php
         endif;
