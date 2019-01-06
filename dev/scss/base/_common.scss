@@ -1,14 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
 $bgColor: #f8f8f8;
 $txtColor: #3c3c3c;
-$mainColor: #a953a8;
+$borderColor: #f0f0f0;
+$mainColor: #f29d3c;
 
 $maxwidth: 980px;
+
+p {
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
 a {
   color: $txtColor;
   text-decoration: none;
+  transition: all .3s ease-out;
+}
+
+li {
+  list-style: none;
 }
 
 img {
   display: block;
+}
+
+
+.container {
+  margin: 0 30px;
+  border-right: 1px solid $borderColor;
+  border-left: 1px solid $borderColor;
+}
+
+
+.POMBtn {
+  width: 240px;
+  padding: 20px 0;
+  display: block;
+  border: 1px solid #535353;
+  color: $txtColor;
+  text-align: center;
 }

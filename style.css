@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP);
 @charset "UTF-8";
 /*
 Theme Name: POM Partners
@@ -246,15 +247,42 @@ audio, canvas, progress, video {
   text-shadow: none;
 }
 
+p {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 a {
   color: #3c3c3c;
   text-decoration: none;
+  transition: all .3s ease-out;
+}
+
+li {
+  list-style: none;
 }
 
 img {
   display: block;
 }
 
+.container {
+  margin: 0 30px;
+  border-right: 1px solid #f0f0f0;
+  border-left: 1px solid #f0f0f0;
+}
+
+.POMBtn, .frontServicesItem_btn, .frontCompany_btn {
+  width: 240px;
+  padding: 20px 0;
+  display: block;
+  border: 1px solid #535353;
+  color: #3c3c3c;
+  text-align: center;
+}
+
+/*------------------------
+---------- header ---------
+---------------------------*/
 .header {
   margin: 0 30px;
   padding: 0 30px;
@@ -302,6 +330,27 @@ img {
   display: none;
 }
 
+@media screen and (max-width: 1280px) {
+  .headerPcNav_menu li {
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header {
+    padding: 0 15px;
+  }
+  .siteTitle img {
+    width: 95%;
+  }
+  .headerPcNav_menu li {
+    width: 75px;
+  }
+  .headerPcNav_menu li a {
+    font-size: 13px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header_wrapper {
     padding: 10px;
@@ -313,8 +362,30 @@ img {
     position: relative;
     display: block;
   }
+  .headerSpNav.active nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .headerSpNav nav {
     display: none;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+  .headerSpNav_menu {
+    height: 50%;
+  }
+  .headerSpNav_menu li + li {
+    margin: 20px 0 0 0;
+  }
+  .headerSpNav_menu a {
+    font-size: 30px;
+    letter-spacing: 0.15em;
   }
   .headerSpNav_btn {
     height: 20px;
@@ -322,6 +393,8 @@ img {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 30;
   }
   .headerSpNav_btn span {
     height: 2px;
@@ -352,8 +425,11 @@ img {
   }
 }
 
+/*---------------------------
+---------- frontPage ---------
+-----------------------------*/
 .frontPageHeader {
-  background: url("./assets/img/frontPage/frontPageHero.jpg");
+  background: url("./assets/img/frontPage/mainHero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -364,5 +440,162 @@ img {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.frontPageHeader_txtWrapper {
+  margin: 0 0 50px 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.frontPageHeader_title {
+  color: #f29d3c;
+  font-size: 50px;
+  letter-spacing: 0.05em;
+}
+
+.frontPageHeader_subTitle {
+  color: #fff;
+  letter-spacing: .7em;
+}
+
+.frontServices {
+  background: #f8f8f8;
+}
+
+.frontServices_wrapper {
+  height: 600px;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.frontServices_wrapper img {
+  position: absolute;
+  top: 28%;
+  left: auto;
+  right: auto;
+  z-index: 10;
+}
+
+.frontServicesItem {
+  height: 600px;
+  width: 50%;
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+}
+
+.frontServicesItem_wrapper {
+  height: 100%;
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.frontServicesItem_title {
+  margin: 0 0 20px 0;
+  color: #f29d3c;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.15em;
+}
+
+.frontServicesItem_subTitle {
+  color: #3c3c3c;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.frontServicesItem_txt {
+  margin: 60px 0 0 0;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  line-height: 2;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.frontServicesItem_btn {
+  margin: auto auto 0;
+}
+
+.frontServicesItem_btn:hover {
+  color: #fff;
+  background: #3c3c3c;
+}
+
+.renovation {
+  top: -60px;
+  left: 0;
+}
+
+.propertySales {
+  top: 60px;
+  right: 0;
+}
+
+/*----- frontCompany -----*/
+.frontCompany {
+  height: 639px;
+  background: url("./assets/img/frontPage/companybg.jpg");
+}
+
+.frontCompany_wrapper {
+  height: 100%;
+  padding: 140px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.frontCompany_title {
+  font-size: 34px;
+  letter-spacing: 0.15em;
+}
+
+.frontCompany_subTitle {
+  letter-spacing: 0.1em;
+}
+
+.frontCompany_txt {
+  margin: 50px 0 70px;
+  text-align: center;
+  line-height: 2.5;
+  letter-spacing: 0.05em;
+}
+
+.frontCompany_btn {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.frontCompany_btn:hover {
+  background: #fff;
+  color: #f29d3c;
+}
+
+@media screen and (max-width: 768px) {
+  .frontPageHeader_wrapper {
+    height: 65vh;
+  }
+  .frontServicesItem {
+    height: 600px;
+  }
+  .frontServicesItem_wrapper {
+    padding: 80px 55px;
+  }
+  .frontServicesItem_title {
+    margin: 0 0 10px 0;
+  }
+  .frontServicesItem_txt {
+    margin: 50px 0 0 0;
+    text-align: left;
+  }
 }
 
