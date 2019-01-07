@@ -1,17 +1,17 @@
 $bgColor: #f8f8f8;
+$bgDarkColor: #3c3c3c;
 $txtColor: #3c3c3c;
+$txtLightColor: #a9a6a6;
 $mainColor: #a953a8;
 
 $maxwidth: 980px;
 
-a {
+a, button, svg, path {
   color: $txtColor;
   text-decoration: none;
   transition: all .5s ease-out;
-  &:hover {
-    opacity: .7;
-  }
 }
+
 
 img {
   display: block;
