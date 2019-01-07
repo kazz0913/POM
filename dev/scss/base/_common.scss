@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
 
 $bgColor: #f8f8f8;
+$bgDarkColor: #3c3c3c;
 $txtColor: #3c3c3c;
+$txtLightColor: #a9a6a6;
 $borderColor: #f0f0f0;
 $mainColor: #f29d3c;
 
@@ -11,7 +13,7 @@ p {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-a {
+a, button, svg, path {
   color: $txtColor;
   text-decoration: none;
   transition: all .3s ease-out;
@@ -20,6 +22,7 @@ a {
 li {
   list-style: none;
 }
+
 
 img {
   display: block;
