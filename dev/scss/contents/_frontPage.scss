@@ -1,5 +1,9 @@
+/*---------------------------
+---------- frontPage ---------
+-----------------------------*/
+
 .frontPageHeader {
-  background: url('./assets/img/frontPage/frontPageHero.jpg');
+  background: url('./assets/img/frontPage/mainHero.jpg');
   background-size: cover;
   background-position: center;
   &_wrapper {
@@ -8,5 +12,156 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+  &_txtWrapper {
+    margin: 0 0 50px 0;
+    line-height: 1.5;
+    text-align: center;
+  }
+  &_title {
+    color: $mainColor;
+    font-size: 50px;
+    letter-spacing: 0.05em;
+  }
+  &_subTitle {
+    color: #fff;
+    letter-spacing: .7em;
+  }
+}
+
+.frontServices {
+  background: #f8f8f8;
+  &_wrapper {
+    height: 600px;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    img {
+      position: absolute;
+      top: 28%;
+      left: auto;
+      right: auto;
+      z-index: 10;
+    }
+  }
+}
+
+.frontServicesItem {
+  height: 600px;
+  width: 50%;
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  &_wrapper {
+    height: 100%;
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  &_title {
+    margin: 0 0 20px 0;
+    color: $mainColor;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0.15em;
+  }
+  &_subTitle {
+    color: $txtColor;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  &_txt {
+    margin: 60px 0 0 0;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    line-height: 2;
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+  &_btn {
+    @extend .POMBtn;
+    margin: auto auto 0;
+    &:hover {
+      color: #fff;
+      background: $txtColor;
+    }
+  }
+}
+
+.renovation {
+  top: -60px;
+  left: 0;
+}
+
+.propertySales {
+  top: 60px;
+  right: 0;
+}
+
+/*----- frontCompany -----*/
+
+.frontCompany {
+  height: 639px;
+  background: url('./assets/img/frontPage/companybg.jpg');
+  &_wrapper {
+    height: 100%;
+    padding: 140px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+  }
+  &_title {
+    font-size: 34px;
+    letter-spacing: 0.15em;
+  }
+  &_subTitle {
+    letter-spacing: 0.1em;
+  }
+  &_txt {
+    margin: 50px 0 70px;
+    text-align: center;
+    line-height: 2.5;
+    letter-spacing: 0.05em;
+  }
+  &_btn {
+    @extend .POMBtn;
+    color: #fff;
+    border: 1px solid #fff;
+    &:hover {
+      background: #fff;
+      color: $mainColor;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .frontPageHeader {
+    &_wrapper {
+      height: 65vh;
+    }
+  }
+
+  .frontServicesItem {
+    height: 600px;
+    &_wrapper {
+      padding: 80px 55px;
+    }
+    &_title {
+      margin: 0 0 10px 0;
+    }
+    &_txt {
+      margin: 50px 0 0 0;
+      text-align: left;
+    }
   }
 }
