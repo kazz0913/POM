@@ -247,8 +247,14 @@ audio, canvas, progress, video {
   text-shadow: none;
 }
 
-p {
+p, span {
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "brother-1816", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a, button, svg, path {
@@ -278,6 +284,7 @@ img {
   border: 1px solid #535353;
   color: #3c3c3c;
   text-align: center;
+  font-family: "brother-1816", sans-serif;
 }
 
 /*------------------------
@@ -314,6 +321,7 @@ img {
 }
 
 .headerPcNav_menu li a {
+  font-family: "brother-1816", sans-serif;
   height: 100%;
   width: 100%;
   line-height: 90px;
@@ -435,14 +443,15 @@ img {
 }
 
 .footerCv a {
-  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #3c3c3c;
+  font-size: 14px;
 }
 
 .footerCv_left {
+  width: 50%;
   background: #efefef;
 }
 
@@ -460,6 +469,7 @@ img {
 }
 
 .footerCv_right {
+  width: 50%;
   background: #fff;
   flex-direction: column;
 }
@@ -471,6 +481,16 @@ img {
 
 .footerCv_right-1 svg {
   margin-right: 16px;
+}
+
+.footerCv_right-2 {
+  font-size: 24px;
+  font-family: "brother-1816", sans-serif;
+  letter-spacing: 2px;
+}
+
+.footerCv_right-smalltxt {
+  font-size: 14px;
 }
 
 .footerCv_right:hover {
@@ -491,6 +511,8 @@ img {
   height: 120px;
   color: #fff;
   background: #3c3c3c;
+  font-family: "brother-1816", sans-serif;
+  font-size: 12px;
 }
 
 .pageTop_btn:hover {
@@ -526,6 +548,7 @@ img {
 .footer_wrapper ul li a {
   font-size: 12px;
   color: #a9a6a6;
+  font-family: "brother-1816", sans-serif;
 }
 
 .copyright {
@@ -534,6 +557,37 @@ img {
 
 .copyright small {
   font-size: 12px;
+}
+
+@media screen and (max-width: 1280px) {
+  .footerCv {
+    height: 348px;
+    flex-direction: column;
+  }
+  .footerCv a {
+    height: 100%;
+  }
+  .footerCv_left {
+    width: 100%;
+  }
+  .footerCv_right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer_wrapper ul li {
+    margin: 0 0 0 2.5vw;
+  }
+  .footer_wrapper ul li + li {
+    margin: 0 0 0 2.5vw;
+  }
+  .copyright {
+    padding: 10px 0;
+  }
 }
 
 /*---------------------------
@@ -691,6 +745,105 @@ img {
   color: #f29d3c;
 }
 
+/*----- frontNews -----*/
+.frontNews {
+  background: #f8f8f8;
+  padding: 105px 0;
+}
+
+.frontNews_wrapper {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 150px 2.5vw;
+}
+
+.frontNews_title {
+  position: absolute;
+  left: -38px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.frontNews_title-l {
+  font-size: 34px;
+  color: #f29d3c;
+}
+
+.frontNews_title-s {
+  font-size: 16px;
+}
+
+.frontNews_posts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.frontNews_post {
+  padding: 0 38px;
+}
+
+.frontNews_post-info {
+  display: flex;
+  align-items: center;
+}
+
+.frontNews_post-date {
+  font-size: 12px;
+  margin-right: 18px;
+}
+
+.frontNews_post-cat {
+  font-size: 10px;
+  color: #fff;
+  background: #b5b5b5;
+  border: 1px solid transparent;
+  padding: 5px 19px;
+}
+
+.frontNews_post-cat:hover {
+  color: #b5b5b5;
+  border: 1px solid #b5b5b5;
+  background: #fff;
+}
+
+.frontNews_post-title {
+  font-size: 14px;
+  line-height: 30px;
+  margin: 31px 0 42px 0;
+}
+
+.frontNews_post-link {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  font-family: "brother-1816", sans-serif;
+}
+
+.frontNews_post-link::before {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 21px;
+  margin-right: 9px;
+  background: #3c3c3c;
+}
+
+.frontNews_post:nth-of-type(2) {
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+@media screen and (max-width: 1280px) {
+  .frontNews_title {
+    left: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .frontPageHeader_wrapper {
     height: 65vh;
@@ -707,6 +860,22 @@ img {
   .frontServicesItem_txt {
     margin: 50px 0 0 0;
     text-align: left;
+  }
+  .frontNews_posts {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .frontNews_post {
+    padding: 20px 0;
+  }
+  .frontNews_post-title {
+    margin: 18px 0;
+  }
+  .frontNews_post:nth-of-type(2) {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    border-left: none;
+    border-right: none;
   }
 }
 

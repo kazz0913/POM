@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
 
 $bgColor: #f8f8f8;
-$bgDarkColor: #3c3c3c;
+$bgDarkColor: #b5b5b5;
+$bgDarkerColor: #3c3c3c;
 $txtColor: #3c3c3c;
 $txtLightColor: #a9a6a6;
 $borderColor: #f0f0f0;
@@ -9,8 +10,16 @@ $mainColor: #f29d3c;
 
 $maxwidth: 980px;
 
-p {
+$mainFont: 'brother-1816', sans-serif;
+
+p, span {
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a, button, svg, path {
@@ -43,4 +52,5 @@ img {
   border: 1px solid #535353;
   color: $txtColor;
   text-align: center;
+  font-family: $mainFont;
 }
