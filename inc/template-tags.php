@@ -4,18 +4,12 @@ if ( ! function_exists( 'posted_on' ) ) :
 function posted_on() {
   $time_string = '
   <span class="date_posted">
-    【投稿日】：
     <time class="published updated" datetime="%1$s">%2$s</time>
   </span>';
   if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
       $time_string = '
         <span class="date_posted">
-        【投稿日】：
           <time class="published" datetime="%1$s">%2$s</time>
-        </span>
-        <span class="date_modified">
-         【最終更新日】：
-          <time class="updated" datetime="%3$s">%4$s</time>
         </span>';
     }
 
