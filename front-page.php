@@ -51,44 +51,46 @@
         <a href="/services/#renovation" class="frontCompany_btn">VIEW MORE</a>
       </div>
     </section>
-  </section>
 
-  <section class="frontNews">
-    <div class="frontNews_wrapper">
-      <h2 class="frontNews_title">
-        <span class="frontNews_title-l">NEWS</span>
-        <span class="frontNews_title-s">お知らせ</span>
-      </h2>
+    <section class="frontNews">
+      <div class="frontNews_wrapper">
+        <h2 class="frontNews_title">
+          <span class="frontNews_title-l">NEWS</span>
+          <span class="frontNews_title-s">お知らせ</span>
+        </h2>
 
-      <div class="frontNews_posts">
+        <div class="frontNews_posts">
 
-        <?php
-          $args = array(
-            'posts_per_page' => 3
-          );
-          $posts = get_posts( $args );
-          foreach ( $posts as $post ):
-          setup_postdata( $post );
-          $cats = get_the_category( $post );
-          $catUrl = get_category_link($cats[0]->term_id);
-          $catName = $cats[0]->name;
-        ?>
+          <?php
+            $args = array(
+              'posts_per_page' => 3
+            );
+            $posts = get_posts( $args );
+            foreach ( $posts as $post ):
+            setup_postdata( $post );
+            $cats = get_the_category( $post );
+            $catUrl = get_category_link($cats[0]->term_id);
+            $catName = $cats[0]->name;
+          ?>
 
-        <div class="frontNews_post">
-          <span class="frontNews_post-info">
-            <time class="frontNews_post-date"><?= get_the_date(); ?></time>
-            <a href="<?= esc_url( $catUrl ); ?>" class="frontNews_post-cat"><?= esc_html( $catName ); ?></a>
-          </span>
-          <a href="<?php the_permalink(); ?>"><h2 class="frontNews_post-title"><?php the_title(); ?></h2></a>
-          <a href="<?php the_permalink(); ?>" class="frontNews_post-link">VIEW MORE</a>
+          <div class="frontNews_post">
+            <span class="frontNews_post-info">
+              <time class="frontNews_post-date"><?= get_the_date(); ?></time>
+              <a href="<?= esc_url( $catUrl ); ?>" class="frontNews_post-cat"><?= esc_html( $catName ); ?></a>
+            </span>
+            <h2 class="frontNews_post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <a href="<?php the_permalink(); ?>" class="frontNews_post-link">VIEW MORE</a>
+          </div>
+          <?php
+            endforeach;
+            wp_reset_postdata();
+          ?>
         </div>
-        <?php
-          endforeach;
-          wp_reset_postdata();
-        ?>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </section><!--pageContent-->
+
 
 
 

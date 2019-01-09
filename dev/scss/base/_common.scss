@@ -54,3 +54,30 @@ img {
   text-align: center;
   font-family: $mainFont;
 }
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 36px;
+  font-size: 14px;
+  border-top: 1px solid $borderColor;
+  border-bottom: 1px solid $borderColor;
+  a {
+    color: #b4b4b4;
+  }
+  li {
+    font-family: $mainFont;
+    display: flex;
+    align-items: center;
+    color: #b4b4b4;
+    & + li {
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f054";
+        margin: 0 27px;
+      }
+    }
+  }
+}

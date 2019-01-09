@@ -4,7 +4,7 @@
 ?>
 
 <ul class="breadcrumb">
-  <li><a href="<?= esc_url( home_url() ); ?>">HOME</a> / </li>
+  <li><a href="<?= esc_url( home_url() ); ?>">TOP</a></li>
   <?php if(is_single()):?>
   <?php
     $cats = get_the_category( $post_id );
@@ -18,14 +18,14 @@
     $catUrl = get_category_link($current->cat_ID);
     $catName = $current->name;
   ?>
-    <li><a href="<?= esc_url( $catUrl ); ?>"><?= esc_html( $catName ); ?></a> / </li>
+    <li><a href="<?= esc_url( $catUrl ); ?>"><?= esc_html( $catName ); ?></a></li>
     <li><?= esc_html( $post_title ); ?></li>
   <?php elseif ( is_page() ): ?>
     <li><?= esc_html( $post_title ); ?></li>
   <?php elseif ( is_404() ): ?>
     <li>ページが見つかりませんでした。</li>
   <?php elseif ( is_home() ): ?>
-    <li>最新記事一覧</li>
+    <li>NEWS</li>
   <?php elseif ( is_category() ): ?>
     <?php
       $bc = '';

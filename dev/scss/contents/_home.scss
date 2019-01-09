@@ -1,0 +1,16 @@
+.pageHero {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_title {
+    text-align: center;
+    h1 {
+      color: $mainColor;
+      font-size: 50px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
