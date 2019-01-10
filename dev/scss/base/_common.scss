@@ -93,6 +93,7 @@ img {
 .newsArea {
   display: grid;
   grid-template: auto / repeat(3, 1fr);
+  padding: 0 90px;
   &_post {
     display: flex;
     flex-direction: column;
@@ -179,6 +180,19 @@ img {
 
 }
 
+@media screen and (max-width: 980px) {
+  .newsArea {
+    grid-template: auto / 1fr;
+    &_post {
+      border-bottom: 1px solid #eeeeee;
+    }
+    :nth-of-type(3n-1) {
+      border-right: none;
+      border-left: none;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     margin: 0 15px;
@@ -186,16 +200,12 @@ img {
 
   .newsArea {
     grid-template: auto / 1fr;
+    padding: 0 15px;
     &_post {
-      border-bottom: 1px solid #eeeeee;
       padding: 20px 0;
       &-title {
         margin: 18px 0;
       }
-    }
-    :nth-of-type(3n-1) {
-      border-right: none;
-      border-left: none;
     }
   }
 }
