@@ -3,15 +3,8 @@
 if ( ! function_exists( 'posted_on' ) ) :
 function posted_on() {
   $time_string = '
-  <span class="date_posted">
-    <time class="published updated" datetime="%1$s">%2$s</time>
-  </span>';
-  if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-      $time_string = '
-        <span class="date_posted">
-          <time class="published" datetime="%1$s">%2$s</time>
-        </span>';
-    }
+    <time class="newsArea_post-date published" datetime="%1$s">%2$s</time>
+  ';
 
   $time_string = sprintf( $time_string,
     esc_attr( get_the_date( DATE_W3C ) ),
@@ -20,7 +13,7 @@ function posted_on() {
     esc_html( get_the_modified_date() )
   );
 
-  echo '<span class="date">' . $time_string . '</span>';
+  echo $time_string;
 }
 endif;
 
