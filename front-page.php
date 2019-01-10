@@ -59,7 +59,7 @@
           <span class="frontNews_title-s">お知らせ</span>
         </h2>
 
-        <div class="frontNews_posts">
+        <div class="newsArea">
 
           <?php
             $args = array(
@@ -73,13 +73,13 @@
             $catName = $cats[0]->name;
           ?>
 
-          <div class="frontNews_post">
-            <span class="frontNews_post-info">
-              <time class="frontNews_post-date"><?= get_the_date(); ?></time>
-              <a href="<?= esc_url( $catUrl ); ?>" class="frontNews_post-cat"><?= esc_html( $catName ); ?></a>
+          <div class="newsArea_post">
+            <span class="newsArea_post-info">
+              <time class="newsArea_post-date"><?= get_the_date(); ?></time>
+              <a href="<?= esc_url( $catUrl ); ?>" class="newsArea_post-cat"><?= esc_html( $catName ); ?></a>
             </span>
-            <h2 class="frontNews_post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <a href="<?php the_permalink(); ?>" class="frontNews_post-link">VIEW MORE</a>
+            <h2 class="newsArea_post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <a href="<?php the_permalink(); ?>" class="newsArea_post-link">VIEW MORE</a>
           </div>
           <?php
             endforeach;
