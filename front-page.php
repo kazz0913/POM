@@ -76,7 +76,7 @@
           <div class="newsArea_post">
             <span class="newsArea_post-info">
               <time class="newsArea_post-date"><?= get_the_date(); ?></time>
-              <a href="<?= esc_url( $catUrl ); ?>" class="newsArea_post-cat"><?= esc_html( $catName ); ?></a>
+              <?php category_list(); ?>
             </span>
             <h2 class="newsArea_post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <a href="<?php the_permalink(); ?>" class="newsArea_post-link">VIEW MORE</a>

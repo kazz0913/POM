@@ -7,6 +7,7 @@ $txtColor: #3c3c3c;
 $txtLightColor: #a9a6a6;
 $borderColor: #f0f0f0;
 $mainColor: #f29d3c;
+$red: #ce0101;
 
 $maxwidth: 980px;
 
@@ -35,6 +36,10 @@ li {
 
 img {
   display: block;
+}
+
+.redtxt {
+  color: $red;
 }
 
 .screen-reader-text {
@@ -66,14 +71,18 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 15px 36px;
-  font-size: 14px;
+  padding: 15px 36px 5px 36px;
+  font-size: 12px;
   border-top: 1px solid $borderColor;
   border-bottom: 1px solid $borderColor;
   a {
     color: #b4b4b4;
+    &:nth-of-type(1) {
+      margin-right: 27px;
+    }
   }
   li {
+    margin-bottom: 10px;
     font-family: $mainFont;
     display: flex;
     align-items: center;
@@ -83,7 +92,7 @@ img {
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         content: "\f054";
-        margin: 0 27px;
+        margin: 0 27px 0 0;
       }
     }
   }

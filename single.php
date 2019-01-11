@@ -32,6 +32,18 @@
     <?php
       the_content() ;
     ?>
+
+    <div class="singlePagination">
+        <span class="singlePagination_prev">
+            <?php previous_post_link('%link', '<i class="fas fa-chevron-left"></i>PREV', TRUE, ''); ?>
+        </span>
+        <span class="singlePagination_home">
+            <a href="<?php echo home_url(); ?>/news">BACK TO LIST</a>
+        </span>
+        <span class="singlePagination_next">
+            <?php next_post_link('%link', 'NEXT<i class="fas fa-chevron-right"></i>', TRUE, ''); ?>
+        </span>
+    </div>
   </section>
 
   <?php
