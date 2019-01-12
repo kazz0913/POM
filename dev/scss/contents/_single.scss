@@ -36,13 +36,24 @@
     font-family: $mainFont;
   }
   &_prev {
+    color: $txtColor;
     .fas {
       margin-right: 28px;
     }
+    &-false {
+      color: #b4b4b4;
+    }
+  }
+  &_home a {
+    color: #b4b4b4;
   }
   &_next {
+    color: $txtColor;
     .fas {
       margin-left: 28px;
+    }
+    &-false {
+      color: #b4b4b4;
     }
   }
 }

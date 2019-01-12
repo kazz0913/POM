@@ -23,21 +23,71 @@
 
 span.wpcf7-list-item {
   margin: 0;
-  & + span {
-    margin-left: 36px;
+}
+
+.wpcf7-list-item {
+  input[type="radio"] {
+    display: none;
+  }
+  &-label {
+    position: relative;
+    display: inline-block;
+    padding: 3px 3px 3px 24px;
+    cursor: pointer;
+    &::before, &::after {
+      position: absolute;
+      top: 6px;
+      border-radius: 100%;
+      transition: all .2s;
+    }
+    &::before {
+      left: 0px;
+      width: 17px;
+      height: 17px;
+      margin-right: 0;
+      background: #f0f0f0;
+      border: 1px solid #f0f0f0;
+    }
+    &:hover::before {
+      background: #fff;
+    }
+    &::after {
+      opacity: 0;
+      left: 3px;
+      width: 11px;
+      height: 11px;
+      margin-top: -4px;
+      background: #626262;
+      transform: scale(2);
+      top: 13px;
+    }
+  }
+  input[type="radio"] {
+    &:checked + .wpcf7-list-item-label::before {
+      background: #fff;
+      border: 1px solid #f0f0f0;
+    }
+    &:checked + .wpcf7-list-item-label::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.reason {
+  &>span {
+    display: grid;
+    grid-template: auto / repeat(3, auto);
   }
 }
 
 .jobItem {
   display: grid;
-  grid-template: auto / repeat(5, 1fr);
+  grid-template: auto / repeat(5, auto);
   grid-gap: 22px 0;
   span.wpcf7-list-item{
     &:nth-of-type(7), &:nth-of-type(8) {
       grid-column: span 2;
-    }
-    & + span {
-      margin-left: 0;
     }
   }
 }
@@ -78,5 +128,61 @@ span.wpcf7-list-item {
     color: $bgDarkerColor;
     background: #fff;
     border: 1px solid $bgDarkerColor;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .contactForm {
+    grid-template: auto / 1fr;
+    grid-gap: 0;
+    &_title {
+      margin-bottom: 5px;
+    }
+    &_info {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+
+}
+
+
+@media screen and (max-width: 980px) {
+  .contactPage {
+    padding: 50px;
+    &_wrapper {
+      padding: 50px;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .contactPage {
+    padding: 0px;
+    &_wrapper {
+      padding: 10px 10px 80px 10px;
+    }
+  }
+  .reason {
+    &>span {
+      grid-template: auto / 1fr;
+    }
+  }
+  .jobItem {
+    grid-template: auto / repeat(2, auto);
+    grid-gap: 12px 0;
+    span.wpcf7-list-item{
+      &:nth-of-type(7), &:nth-of-type(8) {
+        grid-column: auto;
+      }
+    }
+  }
+  .agreement {
+    padding: 10px;
   }
 }
