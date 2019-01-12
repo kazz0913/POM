@@ -83,9 +83,15 @@
 // タブレット
 @media screen and (max-width: 768px) {
   .header {
+    margin: 0 20px;
+    padding: 0;
     &_wrapper {
-      padding: 10px;
+      padding: 10px 0;
     }
+  }
+
+  .siteTitle {
+    margin: 0 0 0 10px;
   }
 
   .headerPcNav {
@@ -106,42 +112,86 @@
       display: none;
       height: 100%;
       width: 100%;
-      background: #fff;
+      background: $mainColor;
       position: fixed;
       top: 0;
       left: 0;
       z-index: 20;
     }
     &_menu {
-      height: 50%;
-      li {
-        & + li {
-          margin: 20px 0 0 0;
-        }
-      }
+      height: auto;
+      width: 100%;
+      margin: 0 50px;
+    }
+    &_list {
+      border-bottom: 1px solid #fff;
       a {
-        font-size: 30px;
+        width: 100%;
+        padding: 25px 20px 25px 30px;
+        color: #fff;
+        font-size: 50px;
+        font-family: $mainFont;
+        font-weight: 200;
+        display: block;
+        position: relative;
         letter-spacing: 0.15em;
+        &:hover {
+          background: #fff;
+          color: $mainColor;
+          &::after {
+            content: '';
+            width: 28px;
+            height: 7px;
+            background: url('./assets/img/icon/arrowIcon.png') no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            right: 25px;
+          }
+        }
+        span {
+          margin: 0 0 0 45px;
+          padding: 0 0 15px 0;
+          font-size: 20px;
+          vertical-align: middle;
+        }
       }
     }
     &_btn {
-      height: 20px;
+      height: 25px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       position: relative;
       z-index: 30;
+      &::before {
+        content: 'MENU';
+        font-family: $mainFont;
+        font-size: 18px;
+        position: absolute;
+        left: -75px;
+        top: -5px;
+      }
       span {
         height: 2px;
-        width: 25px;
+        width: 30px;
         background: #333;
         display: block;
         transition: all .4s ease-out;
       }
       &.active {
         justify-content: center;
+        position: fixed;
+        top: 50px;
+        right: 20px;
+        &::before {
+          content: 'CLOSE';
+          color: #fff;
+          top: -1px;
+        }
         span {
+          background: #fff;
           transform-origin: center;
           &:nth-of-type(1) {
             transform: rotate(-405deg) translate(-1px, 2px);
@@ -157,12 +207,76 @@
       }
     }
   }
+}
 
-
+@media screen and (max-width: 600px) {
+  .headerSpNav {
+    &_list {
+      a {
+        padding: 20px 20px 20px 30px;
+        font-size: 40px;
+        letter-spacing: 0.1em;
+        &:hover {
+          &::after {
+            width: 24px;
+            right: 20px;
+          }
+        }
+        span {
+          margin: 0 0 0 30px;
+          padding: 0 0 10px 0;
+          font-size: 17px;
+        }
+      }
+    }
+  }
 }
 
 
 // スマホ
 @media screen and (max-width: 480px) {
+  .header {
+    margin: 0 15px;
+  }
 
+  .headerSpNav {
+    &_list {
+      a {
+        padding: 20px 15px;
+        font-size: 30px;
+        letter-spacing: 0.08em;
+        &:hover {
+          &::after {
+            width: 20px;
+            right: 15px;
+          }
+        }
+        span {
+          margin: 0 0 0 25px;
+          padding: 0 0 5px 0;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .headerSpNav {
+    &_menu {
+      margin: 0 30px;
+    }
+    &_list {
+      a {
+        padding: 20px 15px;
+        font-size: 26px;
+        letter-spacing: 0.08em;
+        span {
+          margin: 0 0 0 20px;
+          padding: 0 0 5px 0;
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }
