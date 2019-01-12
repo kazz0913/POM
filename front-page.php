@@ -14,6 +14,7 @@
     <section class="frontServices">
       <div class="frontServices_wrapper">
         <img src="<?= get_template_directory_uri() . '/assets/img/frontPage/ourService.png' ?>" alt="ourServices">
+        <p class="frontServices_txt">OUR SERVICE</p>
         <section class="renovation frontServicesItem">
           <div class="frontServicesItem_wrapper">
             <h2 class="frontServicesItem_title">RENOVATION</h2>
