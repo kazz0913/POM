@@ -35,13 +35,25 @@
 
     <div class="singlePagination">
         <span class="singlePagination_prev">
-            <?php previous_post_link('%link', '<i class="fas fa-chevron-left"></i>PREV', TRUE, ''); ?>
+          <?php
+            $prevPost = get_previous_post();
+            if ( !empty($prevPost) ): ?>
+              <a class="singlePagination_prev-true" href="<?= get_permalink( $prevPost->ID ); ?>"><i class="fas fa-chevron-left"></i>PREV</a>
+            <?php else: ?>
+              <span class="singlePagination_prev-false"><i class="fas fa-chevron-left"></i>PREV</span>
+            <?php endif; ?>
         </span>
         <span class="singlePagination_home">
             <a href="<?php echo home_url(); ?>/news">BACK TO LIST</a>
         </span>
         <span class="singlePagination_next">
-            <?php next_post_link('%link', 'NEXT<i class="fas fa-chevron-right"></i>', TRUE, ''); ?>
+            <?php
+            $nextPost = get_next_post();
+            if ( !empty($nextPost) ): ?>
+              <a class="singlePagination_next-true" href="<?= get_permalink( $nextPost->ID ); ?>">NEXT<i class="fas fa-chevron-right"></i></a>
+            <?php else: ?>
+              <span class="singlePagination_next-false">NEXT<i class="fas fa-chevron-right"></i></span>
+            <?php endif; ?>
         </span>
     </div>
   </section>
