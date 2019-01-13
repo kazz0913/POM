@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.11",
-    "ress": "^1.2.2"
+    "ress": "^1.2.2",
+    "smoothscrolljs": "^1.0.0"
   }
 }

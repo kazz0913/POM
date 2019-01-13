@@ -59,7 +59,6 @@ img {
 
 
 .POMBtn {
-  width: 240px;
   padding: 20px 0;
   display: block;
   border: 1px solid #535353;
@@ -205,7 +204,7 @@ img {
 
 @media screen and (max-width: 768px) {
   .container {
-    margin: 0 15px;
+    margin: 0 20px;
   }
 
   .newsArea {
@@ -217,14 +216,6 @@ img {
         margin: 18px 0;
       }
     }
-  }
-}
-
-
-// タブレット
-@media screen and (max-width: 768px) {
-  .container {
-    margin: 0 20px;
   }
 }
 
