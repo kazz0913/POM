@@ -12,9 +12,10 @@ $red: #ce0101;
 $maxwidth: 980px;
 
 $mainFont: 'brother-1816', sans-serif;
+$txtFont: 'Noto Sans JP', sans-serif;
 
 p, span, td {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: $txtFont;
 }
 
 h1, h2, h3 {
