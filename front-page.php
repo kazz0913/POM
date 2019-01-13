@@ -15,7 +15,7 @@
       <div class="frontServices_wrapper">
         <img src="<?= get_template_directory_uri() . '/assets/img/frontPage/ourService.png' ?>" alt="ourServices">
         <p class="frontServices_txt">OUR SERVICE</p>
-        <section class="renovation frontServicesItem">
+        <section class="frontRenovation frontServicesItem">
           <div class="frontServicesItem_wrapper">
             <h2 class="frontServicesItem_title">RENOVATION</h2>
             <p class="frontServicesItem_subTitle">リノベーション事業</p>
@@ -26,7 +26,7 @@
             <a href="/services/#renovation" class="frontServicesItem_btn">VIEW MORE</a>
           </div>
         </section>
-        <section class="propertySales frontServicesItem">
+        <section class="frontPropertySales frontServicesItem">
           <div class="frontServicesItem_wrapper">
             <h2 class="frontServicesItem_title">PROPERTY SALES</h2>
             <p class="frontServicesItem_subTitle">不動産買取・販売事業</p>
