@@ -64,6 +64,8 @@
     background: $bgDarkerColor;
     font-family: $mainFont;
     font-size: 12px;
+    border-right: 1px solid $borderColor;
+    border-left: 1px solid $borderColor;
     &:hover {
       color: $bgDarkerColor;
       background: #fff;
@@ -137,6 +139,7 @@
   .footer {
     margin: 0 20px;
     flex-direction: column;
+    height: auto;
     &_wrapper {
       ul {
         li {
@@ -154,6 +157,7 @@
 
   .copyright {
     padding: 10px 0;
+    text-align: center;
   }
 
 }

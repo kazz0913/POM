@@ -152,7 +152,7 @@ span.wpcf7-list-item {
 
 @media screen and (max-width: 980px) {
   .contactPage {
-    padding: 50px;
+    padding: 94px 50px;
     &_wrapper {
       padding: 50px;
     }
@@ -163,9 +163,9 @@ span.wpcf7-list-item {
 
 @media screen and (max-width: 768px) {
   .contactPage {
-    padding: 0px;
+    padding: 96px 35px;
     &_wrapper {
-      padding: 10px 10px 80px 10px;
+      padding: 40px 10px 80px 10px;
     }
   }
   .reason {
@@ -184,5 +184,11 @@ span.wpcf7-list-item {
   }
   .agreement {
     padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contactPage {
+    padding: 80px 15px;
   }
 }
