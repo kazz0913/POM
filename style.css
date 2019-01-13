@@ -496,6 +496,9 @@ table {
   .container {
     margin: 0 15px;
   }
+  .pageHero_title h1 {
+    font-size: 32px;
+  }
 }
 
 /*------------------------

@@ -250,4 +250,11 @@ table {
  .container {
   margin: 0 15px;
  }
+ .pageHero {
+   &_title {
+     h1 {
+       font-size: 32px;
+     }
+   }
+ }
 }
