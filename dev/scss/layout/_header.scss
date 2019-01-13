@@ -237,6 +237,15 @@
 @media screen and (max-width: 480px) {
   .header {
     margin: 0 15px;
+    &_wrapper {
+      padding: 15px 0;
+    }
+  }
+
+  .siteTitle {
+    img {
+      width: 65%
+    }
   }
 
   .headerSpNav {
@@ -256,6 +265,25 @@
           padding: 0 0 5px 0;
           font-size: 15px;
         }
+      }
+    }
+    &_btn {
+      &.active {
+        right: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headerSpNav {
+    &_btn {
+      height: 20px;
+      &::before {
+        content: 'MENU';
+        font-size: 16px;
+        left: -65px;
+        top: -3px;
       }
     }
   }

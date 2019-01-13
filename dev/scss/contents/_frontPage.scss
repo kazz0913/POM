@@ -3,7 +3,7 @@
 -----------------------------*/
 
 .frontPageHeader {
-  background: url('./assets/img/frontPage/mainHero.jpg');
+  background-image: url('./assets/img/frontPage/mainHero.jpg');
   background-size: cover;
   background-position: center;
   &_wrapper {
@@ -94,6 +94,7 @@
   }
   &_btn {
     @extend .POMBtn;
+    width: 240px;
     margin: auto auto 0;
     &:hover {
       color: #fff;
@@ -116,7 +117,7 @@
 
 .frontCompany {
   height: 639px;
-  background: url('./assets/img/frontPage/companybg.jpg');
+  background-image: url('./assets/img/frontPage/companybg.jpg');
   &_wrapper {
     height: 100%;
     padding: 140px 0;
@@ -140,6 +141,7 @@
   }
   &_btn {
     @extend .POMBtn;
+    width: 240px;
     color: #fff;
     border: 1px solid #fff;
     &:hover {
@@ -169,6 +171,7 @@
     &-l {
       font-size: 34px;
       color: $mainColor;
+      letter-spacing: 0.15em;
     }
     &-s {
       font-size: 16px;
@@ -181,6 +184,7 @@
 @media screen and (max-width: 1280px) {
   .frontNews {
     &_wrapper {
+      margin: 0 20px;
       padding: 50px 0 150px;
     }
     &_title {
@@ -248,3 +252,110 @@
   }
 
 }
+
+@media screen and (max-width: 480px) {
+  .frontPageHeader {
+    background-position: right;
+    &_wrapper {
+      height: 80vh;
+    }
+    &_txtWrapper {
+      margin: 0 0 80px 0;
+    }
+    &_title {
+      font-size: 38px;
+    }
+  }
+
+  .frontServices {
+    &_wrapper {
+      padding: 20px 20px 50px;
+    }
+    &_txt {
+      font-size: 30px;
+    }
+  }
+
+  .frontServicesItem {
+    height: 550px;
+    &_wrapper {
+      padding: 60px;
+    }
+    &_title {
+      font-size: 20px;
+    }
+    &_subTitle {
+      font-size: 12px;
+    }
+    &_txt {
+      font-size: 12px;
+    }
+    &_btn {
+      width: 222px;
+      margin: auto auto 0;
+      &:hover {
+        color: #fff;
+        background: $txtColor;
+      }
+    }
+  }
+
+  .frontCompany {
+    &_wrapper {
+      padding: 80px 0 0;
+    }
+    &_title {
+      font-size: 30px;
+    }
+    &_txt {
+      font-size: 14px;
+      letter-spacing: 0.01em;
+    }
+    &_btn {
+      width: 222px;
+    }
+  }
+
+  .frontNews {
+    &_title {
+      &-l {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .frontPageHeader {
+    &_title {
+      font-size: 33px;
+    }
+  }
+
+  .frontServices {
+    &_wrapper {
+      padding: 20px 15px 50px;
+    }
+  }
+
+  .frontServicesItem {
+    height: 500px;
+    &_wrapper {
+      padding: 40px;
+    }
+    &_btn {
+      width: 100%;
+    }
+  }
+
+  .frontCompany {
+    &_txt {
+      font-size: 13px;
+      line-height: 2.7;
+    }
+    &_btn {
+      width: 233px;
+    }
+  }
+}
+
