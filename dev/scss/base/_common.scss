@@ -80,6 +80,7 @@ table {
   &_title {
     text-align: center;
     h1 {
+      text-transform: uppercase;
       color: $mainColor;
       font-size: 50px;
     }
