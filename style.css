@@ -248,7 +248,7 @@ audio, canvas, progress, video {
 }
 
 p, span {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 h1, h2, h3 {
@@ -1041,12 +1041,12 @@ img {
   background: #3c3c3c;
 }
 
-.renovation {
+.frontRenovation {
   top: -60px;
   left: 0;
 }
 
-.propertySales {
+.frontPropertySales {
   top: 60px;
   right: 0;
 }
@@ -1603,6 +1603,174 @@ span.wpcf7-list-item {
   }
   .agreement {
     padding: 10px;
+  }
+}
+
+.servicePage {
+  background: #f8f8f8;
+  padding: 96px 0;
+}
+
+.servicePage_wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.servicePageItem {
+  height: 810px;
+  margin: 0 0 110px 0;
+  position: relative;
+}
+
+.servicePageItem_title, .renovation_title, .propertySales_title {
+  position: absolute;
+  top: 72px;
+  left: -100px;
+  z-index: 10;
+}
+
+.servicePageItem_title::before, .renovation_title::before, .propertySales_title::before {
+  color: #fff;
+  font-family: "brother-1816", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 42px;
+  position: absolute;
+  top: -86px;
+  left: 0;
+}
+
+.servicePageItem_title-large, .renovation_title-large, .propertySales_title-large {
+  color: #f29d3c;
+  font-size: 30px;
+}
+
+.servicePageItem_title-small, .renovation_title-small, .propertySales_title-small {
+  color: #3c3c3c;
+  font-size: 16px;
+}
+
+.servicePageItem_content {
+  height: 490px;
+  width: 1088px;
+  margin: 0 0 0 auto;
+  background: #fff;
+  position: relative;
+}
+
+.servicePageItem_txt {
+  width: 750px;
+  position: absolute;
+  top: 80px;
+  right: 90px;
+}
+
+.servicePageItem_img, .renovation_img, .propertySales_img {
+  height: auto;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.renovation_title::before {
+  content: '01.';
+}
+
+.propertySales_title::before {
+  content: '02.';
+}
+
+.propertySales_bgWrapper {
+  height: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  .servicePage {
+    padding: 96px 65px;
+  }
+  .servicePageItem {
+    height: auto;
+    margin: 0 0 70px 0;
+  }
+  .servicePageItem_content {
+    height: auto;
+    width: 100%;
+    padding: 50px 30px;
+  }
+  .servicePageItem_title, .renovation_title, .propertySales_title {
+    margin: 30px 0 35px;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .servicePageItem_title::before, .renovation_title::before, .propertySales_title::before {
+    color: #f8f8f8;
+    top: -50px;
+  }
+  .servicePageItem_txt {
+    width: 100%;
+    position: static;
+  }
+  .servicePageItem_img, .renovation_img, .propertySales_img {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicePage {
+    padding: 96px 35px;
+  }
+  .servicePageItem {
+    height: auto;
+    margin: 0 0 70px 0;
+  }
+  .servicePageItem_content {
+    height: auto;
+    width: 100%;
+    padding: 50px 30px;
+  }
+  .servicePageItem_title, .renovation_title, .propertySales_title {
+    margin: 30px 0 35px;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .servicePageItem_title::before, .renovation_title::before, .propertySales_title::before {
+    color: #f8f8f8;
+    top: -50px;
+  }
+  .servicePageItem_txt {
+    width: 100%;
+    position: static;
+  }
+  .servicePageItem_img, .renovation_img, .propertySales_img {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .servicePageItem_txt {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .servicePage {
+    padding: 80px 15px;
+  }
+  .servicePageItem_title-large, .renovation_title-large, .propertySales_title-large {
+    font-size: 24px;
+  }
+  .servicePageItem_title-small, .renovation_title-small, .propertySales_title-small {
+    font-size: 13px;
+  }
+  .servicePageItem_txt {
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
   }
 }
 

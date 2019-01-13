@@ -1,0 +1,198 @@
+.servicePage {
+  background: #f8f8f8;
+  padding: 96px 0;
+  &_wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+
+.servicePageItem {
+  height: 810px;
+  margin:  0 0 110px 0;
+  position: relative;
+  &_title {
+    position: absolute;
+    top: 72px;
+    left: -100px;
+    z-index: 10;
+    &::before {
+      color: #fff;
+      font-family: $mainFont;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 42px;
+      position: absolute;
+      top: -86px;
+      left: 0;
+    }
+    &-large {
+      color: $mainColor;
+      font-size: 30px;
+    }
+    &-small {
+      color: $txtColor;
+      font-size: 16px;
+    }
+  }
+  &_content {
+    height: 490px;
+    width: 1088px;
+    margin: 0 0 0 auto;
+    background: #fff;
+    position: relative;
+  }
+  &_txt {
+    width: 750px;
+    position: absolute;
+    top: 80px;
+    right: 90px;
+  }
+  &_img {
+    height: auto;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.renovation {
+  &_title {
+    @extend .servicePageItem_title;
+    &::before {
+      content: '01.';
+    }
+    &-large {
+      @extend .servicePageItem_title-large;
+    }
+    &-small {
+      @extend .servicePageItem_title-small;
+    }
+  }
+  &_img {
+    @extend .servicePageItem_img;
+  }
+}
+
+.propertySales {
+  &_title {
+    @extend .servicePageItem_title;
+    &::before {
+      content: '02.';
+    }
+    &-large {
+      @extend .servicePageItem_title-large;
+    }
+    &-small {
+      @extend .servicePageItem_title-small;
+    }
+  }
+  &_bgWrapper {
+    height: 100%;
+  }
+  &_img {
+    @extend .servicePageItem_img;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicePage {
+    padding: 96px 65px;
+  }
+
+  .servicePageItem {
+    height: auto;
+    margin:  0 0 70px 0;
+    &_content {
+      height: auto;
+      width: 100%;
+      padding: 50px 30px;
+    }
+    &_title {
+      margin: 30px 0 35px;
+      position: relative;
+      top: auto;
+      left: auto;
+      &::before {
+        color: #f8f8f8;
+        top: -50px;
+      }
+    }
+    &_txt {
+      width: 100%;
+      position: static;
+    }
+    &_img {
+      width: 100%;
+      position: static;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicePage {
+    padding: 96px 35px;
+  }
+
+  .servicePageItem {
+    height: auto;
+    margin:  0 0 70px 0;
+    &_content {
+      height: auto;
+      width: 100%;
+      padding: 50px 30px;
+    }
+    &_title {
+      margin: 30px 0 35px;
+      position: relative;
+      top: auto;
+      left: auto;
+      &::before {
+        color: #f8f8f8;
+        top: -50px;
+      }
+    }
+    &_txt {
+      width: 100%;
+      position: static;
+    }
+    &_img {
+      width: 100%;
+      position: static;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .servicePageItem {
+    &_txt {
+     font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .servicePage {
+    padding: 80px 15px;
+  }
+
+  .servicePageItem {
+    &_title {
+      &-large {
+        font-size: 24px;
+      }
+      &-small {
+        font-size: 13px;
+      }
+    }
+    &_txt {
+      font-size: 13px;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+    }
+  }
+
+}
+
+
