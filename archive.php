@@ -1,34 +1,38 @@
 <?php
   get_header();
-  get_template_part( 'breadcrumb' );
 ?>
 
 <?php
 	if ( have_posts() ) :
   ?>
+<section class="pageHero">
+  <div class="pageHero_title">
+    <h1><?php the_archive_title(); ?></h1>
+    <p>アーカイブ</p>
+  </div>
+</section>
 
-    <header class="pageHeader">
-		  <div class="pageHeader_wrapper">
-        <h1 class="pageHeader_title"><?php the_archive_title(); ?></h1>
-		  </div>
-    </header>
+<? get_template_part( 'breadcrumb' ); ?>
+
+<div class="archive">
+      <div class="archive_wrapper">
     <?php
 
     while ( have_posts() ) :
       the_post();
     ?>
 
-    <article id="<?php the_ID(); ?>" class="entry">
-      <header>
-        <h2>
-          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        </h2>
+    <article id="<?php the_ID(); ?>" class="archive_post">
+      <span class="archive_post-info">
         <?php posted_on(); ?>
-        <?php posted_by(); ?>
-      </header>
-
-      <?php post_thumbnail(); ?>
+        <?php category_list(); ?>
+      </span>
+      <h2 class="archive_post-title">
+        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+      </h2>
+      <a href="<?php the_permalink(); ?>" class="archive_post-link">VIEW MORE</a>
     </article>
+
 
     <?php
     endwhile;
@@ -50,5 +54,4 @@ endif;
 </main>
 
 <?
-	get_sidebar();
 	get_footer();
