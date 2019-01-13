@@ -4,7 +4,7 @@
 
 <section class="pageHero">
   <div class="pageHero_title">
-    <h1>News</h1>
+    <h1>NEWS</h1>
     <p>お知らせ</p>
   </div>
 </section>

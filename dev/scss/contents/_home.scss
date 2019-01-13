@@ -1,20 +1,3 @@
-.pageHero {
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &_title {
-    text-align: center;
-    h1 {
-      color: $mainColor;
-      font-size: 50px;
-    }
-    p {
-      font-size: 14px;
-    }
-  }
-}
-
 .homeNews {
   padding: 96px 0;
   background: $bgColor;
@@ -41,18 +24,23 @@
 }
 
 @media screen and (max-width: 1280px) {
+  .homeNews {
+    padding: 50px;
+  }
 
 }
-
-
-@media screen and (max-width: 980px) {
-}
-
 
 @media screen and (max-width: 768px) {
   .homeNews {
+    padding: 30px;
     &_wrapper {
       padding: 40px 15px;
     }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .homeNews {
+    padding: 15px;
   }
 }

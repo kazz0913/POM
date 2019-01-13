@@ -4,7 +4,7 @@
 
 <section class="pageHero">
   <div class="pageHero_title">
-    <h1>Contact</h1>
+    <h1>CONTACT</h1>
     <p>お問い合わせ</p>
   </div>
 </section>

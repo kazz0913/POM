@@ -13,7 +13,7 @@ $maxwidth: 980px;
 
 $mainFont: 'brother-1816', sans-serif;
 
-p, span {
+p, span, td {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -36,6 +36,10 @@ li {
 
 img {
   display: block;
+}
+
+table {
+  width: 100%;
 }
 
 .redtxt {
@@ -65,6 +69,25 @@ img {
   color: $txtColor;
   text-align: center;
   font-family: $mainFont;
+}
+
+.pageHero {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_title {
+    text-align: center;
+    h1 {
+      color: $mainColor;
+      font-size: 50px;
+    }
+    p {
+      letter-spacing: 12px;
+      text-indent: 12px;
+      font-size: 14px;
+    }
+  }
 }
 
 .breadcrumb {
