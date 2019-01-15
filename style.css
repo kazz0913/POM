@@ -1442,6 +1442,12 @@ table {
   color: #b4b4b4;
 }
 
+@media screen and (max-width: 1180px) {
+  .postContent {
+    padding: 100px 45px;
+  }
+}
+
 @media screen and (max-width: 980px) {
   .postContent_wrapper {
     padding: 50px;
@@ -1449,6 +1455,9 @@ table {
 }
 
 @media screen and (max-width: 768px) {
+  .postContent {
+    padding: 95px 35px;
+  }
   .postContent_wrapper {
     padding: 15px;
   }
@@ -1470,6 +1479,12 @@ table {
   }
   .singlePagination_next .fas {
     margin-left: 7px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .postContent {
+    padding: 30px 15px;
   }
 }
 

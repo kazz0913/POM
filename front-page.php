@@ -34,7 +34,7 @@
               不動産は「売却」も「購入」も、手間も時間もかかるものです。<br>
               POM Partnersでは、物件情報の収集から現地のご案内、購入時、売却時のアドバイスまで、理想的な居住空間、収益物件を誠意と情熱をもってご提案いたします。
             </p>
-            <a href="/company/" class="frontServicesItem_btn">VIEW MORE</a>
+            <a href="/service/#propertySales" class="frontServicesItem_btn">VIEW MORE</a>
           </div>
         </section>
       </div>
@@ -49,7 +49,7 @@
           色あせることなく、長い時間が経っても、より愛着が湧く<br>
           「一生もの」の住まいを提供するPOM Partnersについてご紹介します。
         </p>
-        <a href="/services/#renovation" class="frontCompany_btn">VIEW MORE</a>
+        <a href="/company" class="frontCompany_btn">VIEW MORE</a>
       </div>
     </section>
 

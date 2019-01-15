@@ -1,7 +1,7 @@
 </div><!--container-end-->
 
 <div class="footerCv">
-  <a href="./contact" class="footerCv_left">
+  <a href="<?= esc_url( home_url() ); ?>/contact" class="footerCv_left">
     <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="20px">
       <path fill-rule="evenodd"  fill="rgb(60, 60, 60)" d="M0.557,0.000 L-0.000,0.000 L-0.000,20.000 L34.000,20.000 L34.000,0.000 L0.557,0.000 ZM31.800,1.111 L16.727,12.629 L2.157,1.111 L31.800,1.111 ZM1.115,1.706 L11.133,9.624 L1.115,18.232 L1.115,1.706 ZM2.057,18.889 L12.022,10.327 L16.375,13.772 C16.575,13.930 16.858,13.932 17.060,13.777 L21.584,10.321 L31.903,18.889 L2.057,18.889 ZM32.885,18.258 L22.491,9.624 L32.885,1.682 L32.885,18.258 Z"/>
     </svg>

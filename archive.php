@@ -12,7 +12,7 @@
   </div>
 </section>
 
-<? get_template_part( 'breadcrumb' ); ?>
+<?php get_template_part( 'breadcrumb' ); ?>
 
 <div class="archive">
       <div class="archive_wrapper">
@@ -53,5 +53,5 @@ endif;
 
 </main>
 
-<?
+<?php
 	get_footer();

@@ -9,7 +9,7 @@
   </div>
 </section>
 
-<? get_template_part( 'breadcrumb' ); ?>
+<?php get_template_part( 'breadcrumb' ); ?>
 
   <?php
     if ( have_posts() ):

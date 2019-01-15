@@ -9,7 +9,7 @@
   </div>
 </section>
 
-<? get_template_part( 'breadcrumb' ); ?>
+<?php get_template_part( 'breadcrumb' ); ?>
 
   <section class="servicePage">
     <div class="servicePage_wrapper">
