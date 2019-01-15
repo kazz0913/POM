@@ -52,6 +52,5 @@ if ( have_posts() ) :
 
 </main>
 
-<?
-	get_sidebar();
+<?php
 	get_footer();

@@ -58,8 +58,10 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
-
+@media screen and (max-width: 1180px) {
+  .postContent {
+    padding: 100px 45px;
+  }
 }
 
 
@@ -74,6 +76,7 @@
 
 @media screen and (max-width: 768px) {
   .postContent {
+    padding: 95px 35px;
     &_wrapper {
       padding: 15px;
     }
@@ -102,5 +105,11 @@
         margin-left: 7px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .postContent {
+    padding: 30px 15px;
   }
 }
