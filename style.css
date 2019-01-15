@@ -564,6 +564,7 @@ table {
     padding: 0 15px;
   }
   .siteTitle img {
+    height: auto;
     width: 95%;
   }
   .headerPcNav_menu li {
