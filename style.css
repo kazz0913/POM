@@ -499,6 +499,15 @@ table {
   .pageHero_title h1 {
     font-size: 32px;
   }
+  .breadcrumb {
+    padding: 15px 36px 5px 30px;
+  }
+  .breadcrumb a:nth-of-type(1) {
+    margin-right: 16px;
+  }
+  .breadcrumb li + li::before {
+    margin: 0 16px 0 0;
+  }
 }
 
 /*------------------------
