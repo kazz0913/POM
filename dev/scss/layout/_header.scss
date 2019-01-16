@@ -136,20 +136,6 @@
         display: block;
         position: relative;
         letter-spacing: 0.15em;
-        &:hover {
-          background: #fff;
-          color: $mainColor;
-          &::after {
-            content: '';
-            width: 28px;
-            height: 7px;
-            background: url('./assets/img/icon/arrowIcon.png') no-repeat;
-            background-size: contain;
-            position: absolute;
-            top: 50%;
-            right: 25px;
-          }
-        }
         span {
           margin: 0 0 0 45px;
           padding: 0 0 15px 0;
@@ -217,12 +203,6 @@
         padding: 20px 20px 20px 30px;
         font-size: 40px;
         letter-spacing: 0.1em;
-        &:hover {
-          &::after {
-            width: 24px;
-            right: 20px;
-          }
-        }
         span {
           margin: 0 0 0 30px;
           padding: 0 0 10px 0;
@@ -244,9 +224,7 @@
   }
 
   .siteTitle {
-    img {
-      width: 65%
-    }
+    width: 55%;
   }
 
   .headerSpNav {
@@ -255,12 +233,6 @@
         padding: 20px 15px;
         font-size: 30px;
         letter-spacing: 0.08em;
-        &:hover {
-          &::after {
-            width: 20px;
-            right: 15px;
-          }
-        }
         span {
           margin: 0 0 0 25px;
           padding: 0 0 5px 0;
@@ -269,22 +241,14 @@
       }
     }
     &_btn {
-      &.active {
-        right: 15px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .headerSpNav {
-    &_btn {
       height: 20px;
       &::before {
-        content: 'MENU';
         font-size: 16px;
         left: -65px;
         top: -3px;
+      }
+      &.active {
+        right: 15px;
       }
     }
   }

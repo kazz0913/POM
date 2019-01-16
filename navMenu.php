@@ -6,9 +6,6 @@
         <a href="/service">SERVICE<span>事業内容</span></a>
       </li>
       <li class="headerSpNav_list">
-        <a href="/recruit">RECRUIT<span>採用情報</span></a>
-      </li>
-      <li class="headerSpNav_list">
         <a href="/news">NEWS<span>お知らせ</span></a>
       </li>
       <li class="headerSpNav_list">

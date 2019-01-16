@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP);
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP);
 /*
 Theme Name: POM Partners
 Author: Fump
@@ -280,6 +280,10 @@ table {
   color: #ce0101;
 }
 
+.spOnly {
+  display: none;
+}
+
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -493,6 +497,9 @@ table {
 }
 
 @media screen and (max-width: 480px) {
+  .spOnly {
+    display: block;
+  }
   .container {
     margin: 0 15px;
   }
@@ -636,20 +643,6 @@ table {
     position: relative;
     letter-spacing: 0.15em;
   }
-  .headerSpNav_list a:hover {
-    background: #fff;
-    color: #f29d3c;
-  }
-  .headerSpNav_list a:hover::after {
-    content: '';
-    width: 28px;
-    height: 7px;
-    background: url("./assets/img/icon/arrowIcon.png") no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 50%;
-    right: 25px;
-  }
   .headerSpNav_list a span {
     margin: 0 0 0 45px;
     padding: 0 0 15px 0;
@@ -717,10 +710,6 @@ table {
     font-size: 40px;
     letter-spacing: 0.1em;
   }
-  .headerSpNav_list a:hover::after {
-    width: 24px;
-    right: 20px;
-  }
   .headerSpNav_list a span {
     margin: 0 0 0 30px;
     padding: 0 0 10px 0;
@@ -735,37 +724,29 @@ table {
   .header_wrapper {
     padding: 15px 0;
   }
-  .siteTitle img {
-    width: 65%;
+  .siteTitle {
+    width: 55%;
   }
   .headerSpNav_list a {
     padding: 20px 15px;
     font-size: 30px;
     letter-spacing: 0.08em;
   }
-  .headerSpNav_list a:hover::after {
-    width: 20px;
-    right: 15px;
-  }
   .headerSpNav_list a span {
     margin: 0 0 0 25px;
     padding: 0 0 5px 0;
     font-size: 15px;
   }
-  .headerSpNav_btn.active {
-    right: 15px;
-  }
-}
-
-@media screen and (max-width: 480px) {
   .headerSpNav_btn {
     height: 20px;
   }
   .headerSpNav_btn::before {
-    content: 'MENU';
     font-size: 16px;
     left: -65px;
     top: -3px;
+  }
+  .headerSpNav_btn.active {
+    right: 15px;
   }
 }
 
@@ -1330,13 +1311,13 @@ table {
 
 @media screen and (max-width: 1280px) {
   .homeNews {
-    padding: 50px;
+    padding: 80px 50px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .homeNews {
-    padding: 30px;
+    padding: 60px 30px;
   }
   .homeNews_wrapper {
     padding: 40px 15px;
@@ -1345,7 +1326,7 @@ table {
 
 @media screen and (max-width: 480px) {
   .homeNews {
-    padding: 15px;
+    padding: 50px 15px;
   }
 }
 
@@ -1465,7 +1446,7 @@ table {
 
 @media screen and (max-width: 768px) {
   .postContent {
-    padding: 95px 35px;
+    padding: 60px 30px;
   }
   .postContent_wrapper {
     padding: 15px;
@@ -1493,7 +1474,7 @@ table {
 
 @media screen and (max-width: 480px) {
   .postContent {
-    padding: 30px 15px;
+    padding: 50px 15px;
   }
 }
 
@@ -1664,7 +1645,7 @@ span.wpcf7-list-item {
 
 @media screen and (max-width: 980px) {
   .contactPage, .companyPage {
-    padding: 94px 50px;
+    padding: 80px 50px;
   }
   .contactPage_wrapper, .companyPage_wrapper {
     padding: 50px;
@@ -1673,7 +1654,7 @@ span.wpcf7-list-item {
 
 @media screen and (max-width: 768px) {
   .contactPage, .companyPage {
-    padding: 96px 35px;
+    padding: 60px 30px;
   }
   .contactPage_wrapper, .companyPage_wrapper {
     padding: 40px 10px 80px 10px;
@@ -1699,7 +1680,7 @@ span.wpcf7-list-item {
 
 @media screen and (max-width: 480px) {
   .contactPage, .companyPage {
-    padding: 80px 15px;
+    padding: 50px 15px;
   }
 }
 
@@ -1712,6 +1693,10 @@ span.wpcf7-list-item {
 .companyInfo_name, .companyInfo_detail {
   padding: 30px 0;
   border-bottom: 1px solid #f0f0f0;
+}
+
+.companyInfo_name-right, .companyInfo_detail-right {
+  margin: 0 0 0 20px;
 }
 
 .companyInfo_name {
@@ -1733,6 +1718,9 @@ span.wpcf7-list-item {
     padding: 15px;
     border: none;
   }
+  .companyInfo_name-right, .companyInfo_detail-right {
+    margin: 0;
+  }
   .companyInfo_name {
     font-weight: bold;
     background: #f8f8f8;
@@ -1742,7 +1730,7 @@ span.wpcf7-list-item {
 
 .servicePage {
   background: #f8f8f8;
-  padding: 96px 0;
+  padding: 125px 0;
 }
 
 .servicePage_wrapper {
@@ -1768,20 +1756,22 @@ span.wpcf7-list-item {
   font-family: "brother-1816", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 42px;
+  font-size: 52px;
   position: absolute;
-  top: -86px;
+  top: -90px;
   left: 0;
 }
 
 .servicePageItem_title-large, .renovation_title-large, .propertySales_title-large {
   color: #f29d3c;
-  font-size: 30px;
+  font-size: 34px;
+  letter-spacing: 0.1em;
 }
 
 .servicePageItem_title-small, .renovation_title-small, .propertySales_title-small {
   color: #3c3c3c;
   font-size: 16px;
+  font-weight: bold;
 }
 
 .servicePageItem_content {
@@ -1793,7 +1783,9 @@ span.wpcf7-list-item {
 }
 
 .servicePageItem_txt {
-  width: 750px;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.15em;
   position: absolute;
   top: 80px;
   right: 90px;
@@ -1811,12 +1803,16 @@ span.wpcf7-list-item {
   content: '01.';
 }
 
+.renovation_txt {
+  width: 750px;
+}
+
 .propertySales_title::before {
   content: '02.';
 }
 
-.propertySales_bgWrapper {
-  height: 100%;
+.propertySales_txt {
+  width: 670px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1830,7 +1826,7 @@ span.wpcf7-list-item {
   .servicePageItem_content {
     height: auto;
     width: 100%;
-    padding: 50px 30px;
+    padding: 60px 30px 50px;
   }
   .servicePageItem_title, .renovation_title, .propertySales_title {
     margin: 30px 0 35px;
@@ -1840,7 +1836,7 @@ span.wpcf7-list-item {
   }
   .servicePageItem_title::before, .renovation_title::before, .propertySales_title::before {
     color: #f8f8f8;
-    top: -50px;
+    top: -70px;
   }
   .servicePageItem_txt {
     width: 100%;
@@ -1873,7 +1869,7 @@ span.wpcf7-list-item {
   }
   .servicePageItem_title::before, .renovation_title::before, .propertySales_title::before {
     color: #f8f8f8;
-    top: -50px;
+    top: -65px;
   }
   .servicePageItem_txt {
     width: 100%;
@@ -1893,17 +1889,18 @@ span.wpcf7-list-item {
 
 @media screen and (max-width: 480px) {
   .servicePage {
-    padding: 80px 15px;
+    padding: 60px 15px;
+  }
+  .servicePageItem_content {
+    padding: 40px 15px;
   }
   .servicePageItem_title-large, .renovation_title-large, .propertySales_title-large {
-    font-size: 24px;
+    font-size: 26px;
   }
   .servicePageItem_title-small, .renovation_title-small, .propertySales_title-small {
     font-size: 13px;
   }
   .servicePageItem_txt {
-    font-size: 13px;
-    line-height: 1.5;
     letter-spacing: 0.05em;
   }
 }

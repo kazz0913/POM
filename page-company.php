@@ -47,7 +47,9 @@
             </tr>
             <tr>
               <td class="companyInfo_name">電話番号</td>
-              <td class="companyInfo_detail">TEL : 03‑6402‑5737　　FAX : 03‑6402‑5738</td>
+              <td class="companyInfo_detail">
+                TEL : 03‑6402‑5737<br class="spOnly">
+                <span class="companyInfo_detail-right">FAX : 03‑6402‑5738</span></td>
             </tr>
             <tr>
               <td class="companyInfo_name">認可番号</td>

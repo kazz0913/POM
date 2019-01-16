@@ -34,7 +34,6 @@ li {
   list-style: none;
 }
 
-
 img {
   display: block;
 }
@@ -46,6 +45,10 @@ table {
 .redtxt {
   font-family: "Kozuka Gothic Pr6N";
   color: $red;
+}
+
+.spOnly {
+  display: none;
 }
 
 .screen-reader-text {
@@ -209,11 +212,6 @@ table {
   }
 }
 
-
-@media screen and (max-width: 1280px) {
-
-}
-
 @media screen and (max-width: 980px) {
   .newsArea {
     grid-template: auto / 1fr;
@@ -247,6 +245,9 @@ table {
 
 // スマホ
 @media screen and (max-width: 480px) {
+  .spOnly {
+    display: block;
+  }
  .container {
   margin: 0 15px;
  }
