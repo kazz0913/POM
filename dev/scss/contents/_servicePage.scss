@@ -1,6 +1,6 @@
 .servicePage {
   background: #f8f8f8;
-  padding: 96px 0;
+  padding: 125px 0;
   &_wrapper {
     max-width: 1180px;
     margin: 0 auto;
@@ -21,18 +21,20 @@
       font-family: $mainFont;
       font-weight: 500;
       font-style: normal;
-      font-size: 42px;
+      font-size: 52px;
       position: absolute;
-      top: -86px;
+      top: -90px;
       left: 0;
     }
     &-large {
       color: $mainColor;
-      font-size: 30px;
+      font-size: 34px;
+      letter-spacing: 0.1em;
     }
     &-small {
       color: $txtColor;
       font-size: 16px;
+      font-weight: bold;
     }
   }
   &_content {
@@ -43,7 +45,9 @@
     position: relative;
   }
   &_txt {
-    width: 750px;
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 0.15em;
     position: absolute;
     top: 80px;
     right: 90px;
@@ -70,6 +74,9 @@
       @extend .servicePageItem_title-small;
     }
   }
+  &_txt {
+    width: 750px;
+  }
   &_img {
     @extend .servicePageItem_img;
   }
@@ -88,8 +95,8 @@
       @extend .servicePageItem_title-small;
     }
   }
-  &_bgWrapper {
-    height: 100%;
+  &_txt {
+    width: 670px;
   }
   &_img {
     @extend .servicePageItem_img;
@@ -107,7 +114,7 @@
     &_content {
       height: auto;
       width: 100%;
-      padding: 50px 30px;
+      padding: 60px 30px 50px;
     }
     &_title {
       margin: 30px 0 35px;
@@ -116,7 +123,7 @@
       left: auto;
       &::before {
         color: #f8f8f8;
-        top: -50px;
+        top: -70px;
       }
     }
     &_txt {
@@ -150,7 +157,7 @@
       left: auto;
       &::before {
         color: #f8f8f8;
-        top: -50px;
+        top: -65px;
       }
     }
     &_txt {
@@ -174,25 +181,25 @@
 
 @media screen and (max-width: 480px) {
   .servicePage {
-    padding: 80px 15px;
+    padding: 60px 15px;
   }
 
   .servicePageItem {
+    &_content {
+      padding: 40px 15px;
+    }
     &_title {
       &-large {
-        font-size: 24px;
+        font-size: 26px;
       }
       &-small {
         font-size: 13px;
       }
     }
     &_txt {
-      font-size: 13px;
-      line-height: 1.5;
       letter-spacing: 0.05em;
     }
   }
 
 }
-
 

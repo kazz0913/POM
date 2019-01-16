@@ -25,14 +25,14 @@
 
 @media screen and (max-width: 1280px) {
   .homeNews {
-    padding: 50px;
+    padding: 80px 50px;
   }
 
 }
 
 @media screen and (max-width: 768px) {
   .homeNews {
-    padding: 30px;
+    padding: 60px 30px;
     &_wrapper {
       padding: 40px 15px;
     }
@@ -41,6 +41,6 @@
 
 @media screen and (max-width: 480px) {
   .homeNews {
-    padding: 15px;
+    padding: 50px 15px;
   }
 }
