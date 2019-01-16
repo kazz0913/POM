@@ -280,6 +280,10 @@ table {
   color: #ce0101;
 }
 
+.spOnly {
+  display: none;
+}
+
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -493,6 +497,9 @@ table {
 }
 
 @media screen and (max-width: 480px) {
+  .spOnly {
+    display: block;
+  }
   .container {
     margin: 0 15px;
   }
@@ -636,20 +643,6 @@ table {
     position: relative;
     letter-spacing: 0.15em;
   }
-  .headerSpNav_list a:hover {
-    background: #fff;
-    color: #f29d3c;
-  }
-  .headerSpNav_list a:hover::after {
-    content: '';
-    width: 28px;
-    height: 7px;
-    background: url("./assets/img/icon/arrowIcon.png") no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 50%;
-    right: 25px;
-  }
   .headerSpNav_list a span {
     margin: 0 0 0 45px;
     padding: 0 0 15px 0;
@@ -717,10 +710,6 @@ table {
     font-size: 40px;
     letter-spacing: 0.1em;
   }
-  .headerSpNav_list a:hover::after {
-    width: 24px;
-    right: 20px;
-  }
   .headerSpNav_list a span {
     margin: 0 0 0 30px;
     padding: 0 0 10px 0;
@@ -743,29 +732,21 @@ table {
     font-size: 30px;
     letter-spacing: 0.08em;
   }
-  .headerSpNav_list a:hover::after {
-    width: 20px;
-    right: 15px;
-  }
   .headerSpNav_list a span {
     margin: 0 0 0 25px;
     padding: 0 0 5px 0;
     font-size: 15px;
   }
-  .headerSpNav_btn.active {
-    right: 15px;
-  }
-}
-
-@media screen and (max-width: 480px) {
   .headerSpNav_btn {
     height: 20px;
   }
   .headerSpNav_btn::before {
-    content: 'MENU';
     font-size: 16px;
     left: -65px;
     top: -3px;
+  }
+  .headerSpNav_btn.active {
+    right: 15px;
   }
 }
 
@@ -1714,6 +1695,10 @@ span.wpcf7-list-item {
   border-bottom: 1px solid #f0f0f0;
 }
 
+.companyInfo_name-right, .companyInfo_detail-right {
+  margin: 0 0 0 20px;
+}
+
 .companyInfo_name {
   flex: 1;
   margin-right: 4vw;
@@ -1732,6 +1717,9 @@ span.wpcf7-list-item {
     width: 100%;
     padding: 15px;
     border: none;
+  }
+  .companyInfo_name-right, .companyInfo_detail-right {
+    margin: 0;
   }
   .companyInfo_name {
     font-weight: bold;
