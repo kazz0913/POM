@@ -1,4 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.eot');
+  src: url('./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.woff') format('woff'),
+  url('./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/regular/NotoSansCJKjp-Regular.eot');
+  src: url('./assets/fonts/regular/NotoSansCJKjp-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/regular/NotoSansCJKjp-Regular.woff') format('woff'),
+  url('./assets/fonts/regular/NotoSansCJKjp-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/medium/NotoSansCJKjp-Medium.eot');
+  src: url('./assets/fonts/medium/NotoSansCJKjp-Medium.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/medium/NotoSansCJKjp-Medium.woff') format('woff'),
+  url('./assets/fonts/medium/NotoSansCJKjp-Medium.ttf')  format('truetype');
+}
 
 $bgColor: #f8f8f8;
 $bgDarkColor: #b5b5b5;
@@ -12,10 +40,10 @@ $red: #ce0101;
 $maxwidth: 980px;
 
 $mainFont: 'brother-1816', sans-serif;
-$txtFont: 'Noto Sans JP', sans-serif;
 
 p, span, td {
-  font-family: $txtFont;
+  font-family: 'Noto Sans Japanese';
+  font-weight: 400;
 }
 
 h1, h2, h3 {

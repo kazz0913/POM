@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP);
 /*
 Theme Name: POM Partners
 Author: Fump
@@ -247,8 +246,33 @@ audio, canvas, progress, video {
   text-shadow: none;
 }
 
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 300;
+  src: url("./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.eot");
+  src: url("./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.woff") format("woff"), url("./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/regular/NotoSansCJKjp-Regular.eot");
+  src: url("./assets/fonts/regular/NotoSansCJKjp-Regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/regular/NotoSansCJKjp-Regular.woff") format("woff"), url("./assets/fonts/regular/NotoSansCJKjp-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/medium/NotoSansCJKjp-Medium.eot");
+  src: url("./assets/fonts/medium/NotoSansCJKjp-Medium.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/medium/NotoSansCJKjp-Medium.woff") format("woff"), url("./assets/fonts/medium/NotoSansCJKjp-Medium.ttf") format("truetype");
+}
+
 p, span, td {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans Japanese';
+  font-weight: 400;
 }
 
 h1, h2, h3 {
@@ -647,6 +671,9 @@ table {
     margin: 0 0 0 45px;
     padding: 0 0 15px 0;
     font-size: 20px;
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 300;
     vertical-align: middle;
   }
   .headerSpNav_btn {
@@ -1041,8 +1068,9 @@ table {
 
 .frontServicesItem_subTitle {
   color: #3c3c3c;
+  font-family: 'Noto Sans Japanese';
+  font-weight: 500;
   font-size: 14px;
-  font-weight: bold;
   text-align: center;
   letter-spacing: 0.05em;
 }
