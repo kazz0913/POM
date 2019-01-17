@@ -13,6 +13,7 @@
   }
   &_name, &_detail {
     padding: 30px 0;
+    display: block;
     border-bottom: 1px solid $borderColor;
     &-right {
       margin: 0 0 0 20px;
