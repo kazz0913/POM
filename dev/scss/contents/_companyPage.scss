@@ -27,6 +27,16 @@
   }
 }
 
+.securityAction {
+  margin-top: 30px;
+  z-index: 20;
+  position: relative;
+  text-align: center;
+  &_link {
+    display: inline-block;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .companyInfo {
     tr {

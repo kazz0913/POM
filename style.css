@@ -1877,6 +1877,17 @@ span.wpcf7-list-item {
   width: 75%;
 }
 
+.securityAction {
+  margin-top: 30px;
+  z-index: 20;
+  position: relative;
+  text-align: center;
+}
+
+.securityAction_link {
+  display: inline-block;
+}
+
 @media screen and (max-width: 480px) {
   .companyInfo tr {
     flex-direction: column;
