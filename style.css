@@ -1869,12 +1869,12 @@ span.wpcf7-list-item {
 }
 
 .companyInfo_name {
-  flex: 1;
+  width: 25%;
   margin-right: 4vw;
 }
 
 .companyInfo_detail {
-  flex: 3;
+  width: 75%;
 }
 
 @media screen and (max-width: 480px) {
