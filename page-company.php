@@ -61,7 +61,11 @@
             </tr>
           </tbody>
         </table>
-        <?php the_content(); ?>
+        <div class="securityAction">
+          <a href="https://security-shien.ipa.go.jp/security/index.html" class="securityAction_link" target="_blank" rel="noopener noreferrer">
+            <img src="<?= get_stylesheet_directory_uri() . '/assets/img/company/security_action.png' ?>" alt="セキュリティ対策自己宣言">
+          </a>
+      </div>
       </div>
     </section>
 
