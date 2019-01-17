@@ -1674,6 +1674,7 @@ span.wpcf7-list-item {
 .reason > span {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -1825,19 +1826,9 @@ span.wpcf7-list-item {
   .contactPage_wrapper, .companyPage_wrapper {
     padding: 40px 10px 80px 10px;
   }
-  .reason > span {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-  .jobItem {
-    -ms-grid-columns: (auto)[2];
-    grid-template-columns: repeat(2, auto);
-  }
-  .jobItem span.wpcf7-list-item {
-    margin-bottom: 12px;
-  }
-  .jobItem span.wpcf7-list-item:nth-of-type(7), .jobItem span.wpcf7-list-item:nth-of-type(8) {
-    grid-column: auto;
+  .reason > span span {
+    width: 100%;
+    margin: 2px;
   }
   .agreement {
     padding: 10px;
@@ -1850,6 +1841,9 @@ span.wpcf7-list-item {
   }
   .contactForm {
     row-gap: 14px;
+  }
+  .jobItem span.wpcf7-list-item {
+    margin: 10px;
   }
 }
 

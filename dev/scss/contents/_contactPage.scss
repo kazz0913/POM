@@ -100,6 +100,7 @@ span.wpcf7-list-item {
   &>span {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -109,7 +110,7 @@ span.wpcf7-list-item {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  span.wpcf7-list-item{
+  span.wpcf7-list-item {
     margin: 0 10px 22px 10px;
   }
 }
@@ -196,15 +197,9 @@ span.wpcf7-list-item {
   }
   .reason {
     &>span {
-      grid-template-columns: 1fr;
-    }
-  }
-  .jobItem {
-    grid-template-columns: repeat(2, auto);
-    span.wpcf7-list-item{
-      margin-bottom: 12px;
-      &:nth-of-type(7), &:nth-of-type(8) {
-        grid-column: auto;
+      & span {
+        width: 100%;
+        margin: 2px;
       }
     }
   }
@@ -219,5 +214,10 @@ span.wpcf7-list-item {
   }
   .contactForm {
     row-gap: 14px;
+  }
+  .jobItem {
+    span.wpcf7-list-item {
+      margin: 10px;
+    }
   }
 }
