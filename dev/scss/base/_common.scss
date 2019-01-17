@@ -3,8 +3,7 @@
   font-style: normal;
   font-weight: 300;
   src: url('./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.eot');
-  src: url('./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.eot?#iefix') format('embedded-opentype'),
-  url('./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.woff') format('woff'),
+  src: url('./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.woff') format('woff'),
   url('./assets/fonts/demiLight/NotoSansCJKjp-DemiLight.ttf')  format('truetype');
 }
 
@@ -13,8 +12,7 @@
   font-style: normal;
   font-weight: 400;
   src: url('./assets/fonts/regular/NotoSansCJKjp-Regular.eot');
-  src: url('./assets/fonts/regular/NotoSansCJKjp-Regular.eot?#iefix') format('embedded-opentype'),
-  url('./assets/fonts/regular/NotoSansCJKjp-Regular.woff') format('woff'),
+  src: url('./assets/fonts/regular/NotoSansCJKjp-Regular.woff') format('woff'),
   url('./assets/fonts/regular/NotoSansCJKjp-Regular.ttf')  format('truetype');
 }
 
@@ -23,8 +21,7 @@
   font-style: normal;
   font-weight: 500;
   src: url('./assets/fonts/medium/NotoSansCJKjp-Medium.eot');
-  src: url('./assets/fonts/medium/NotoSansCJKjp-Medium.eot?#iefix') format('embedded-opentype'),
-  url('./assets/fonts/medium/NotoSansCJKjp-Medium.woff') format('woff'),
+  src: url('./assets/fonts/medium/NotoSansCJKjp-Medium.woff') format('woff'),
   url('./assets/fonts/medium/NotoSansCJKjp-Medium.ttf')  format('truetype');
 }
 
@@ -156,11 +153,13 @@ table {
 
 
 .newsArea {
-  display: grid;
-  grid-template: auto / repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   padding: 0 90px;
   &_post {
+    width: calc(100% / 3);
     display: flex;
+    grid-row: auto;
     flex-direction: column;
     padding: 35px 38px;
     &-info {
@@ -240,10 +239,11 @@ table {
   }
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1180px) {
   .newsArea {
-    grid-template: auto / 1fr;
+    flex-direction: column;
     &_post {
+      width: 100%;
       border-bottom: 1px solid #eeeeee;
     }
     :nth-of-type(3n-1) {
@@ -259,7 +259,6 @@ table {
   }
 
   .newsArea {
-    grid-template: auto / 1fr;
     padding: 0 15px;
     &_post {
       padding: 20px 0;
