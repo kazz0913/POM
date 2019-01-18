@@ -1115,6 +1115,8 @@ table {
 .frontCompany {
   height: 639px;
   background-image: url("./assets/img/frontPage/companybg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .frontCompany_wrapper {
