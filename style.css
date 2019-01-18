@@ -570,6 +570,10 @@ table {
   text-align: center;
 }
 
+.headerPcNav_menu li:last-child {
+  margin: 0 0 0 15px;
+}
+
 .headerPcNav_menu li a {
   font-family: "brother-1816", sans-serif;
   height: 100%;
@@ -625,8 +629,13 @@ table {
     display: none;
   }
   .headerSpNav {
-    position: relative;
     display: block;
+    position: fixed;
+    right: 20px;
+    z-index: 20;
+  }
+  .headerSpNav.active {
+    position: static;
   }
   .headerSpNav.active nav {
     display: flex;
@@ -748,6 +757,9 @@ table {
   }
   .siteTitle {
     width: 55%;
+  }
+  .headerSpNav {
+    right: 15px;
   }
   .headerSpNav_list a {
     padding: 20px 15px;
