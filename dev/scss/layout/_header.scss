@@ -26,6 +26,9 @@
       width: 100px;
       list-style: none;
       text-align: center;
+      &:last-child {
+        margin: 0 0 0 12px;
+      }
       a {
         font-family: $mainFont;
         height: 100%;
@@ -100,9 +103,12 @@
   }
 
   .headerSpNav {
-    position: relative;
     display: block;
+    position: fixed;
+    right: 20px;
+    z-index: 20;
     &.active {
+      position: static;
       nav {
         display: flex;
         justify-content: center;
@@ -231,6 +237,7 @@
   }
 
   .headerSpNav {
+    right: 15px;
     &_list {
       a {
         padding: 20px 15px;
