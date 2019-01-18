@@ -571,7 +571,7 @@ table {
 }
 
 .headerPcNav_menu li:last-child {
-  margin: 0 0 0 15px;
+  margin: 0 0 0 12px;
 }
 
 .headerPcNav_menu li a {
@@ -990,7 +990,7 @@ table {
 .frontPageHeader {
   background-image: url("./assets/img/frontPage/mainHero.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: right;
 }
 
 .frontPageHeader_wrapper {
