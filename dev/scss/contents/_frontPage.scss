@@ -119,6 +119,8 @@
 .frontCompany {
   height: 639px;
   background-image: url('./assets/img/frontPage/companybg.jpg');
+  background-size: cover;
+  background-position: center;
   &_wrapper {
     height: 100%;
     padding: 140px 0;
